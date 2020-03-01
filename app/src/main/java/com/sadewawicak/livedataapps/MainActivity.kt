@@ -1,6 +1,7 @@
 package com.sadewawicak.livedataapps
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
             timer_textview.text = newText
         }
         viewModel.getElapsedTime()?.observe(this, elapsedTimeObserver)
+    }
+
+    private fun doAction() {
+        Log.i("i", "")
     }
 
 }
